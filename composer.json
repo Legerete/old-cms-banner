@@ -1,0 +1,32 @@
+{
+	"name": "wundermanpraha/cms-banner",
+	"type": "library",
+	"description": "",
+	"license": "GNU GPL v3",
+	"support": {
+		"issues": "https://github.com/wundermanpraha/cms-banner/issues"
+	},
+	"authors": [
+		{
+			"name": "Pavel Janda",
+			"homepage": "http://paveljanda.com"
+		},
+		{
+			"name": "Jan Havlíček",
+			"email": "janhav@seznam.cz"
+		}
+	],
+	"autoload": {
+		"psr-4": {
+			"Wunderman\\CMS\\Banner\\": "src/"
+		}
+	},
+	"require": {
+		"nette/di" : "^2.3",
+		"nette/application" : "^2.3"
+	},
+	"minimum-stability": "dev",
+	"require-dev": {
+		"codeception/codeception": "^2.1"
+	}
+}

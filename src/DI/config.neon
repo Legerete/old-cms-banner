@@ -1,0 +1,21 @@
+parameters:
+	PrivateModule:
+		AddButtons:
+			## This name must be same as name of injected service in Wunderman\CMS\Banner for composedPagePresenter (@privateModuleService in this config)
+			Banner:
+				text: 'Add full page image'
+				tooltip: ''
+	renderableComponents:
+		Banner:
+
+services:
+	privateModuleService:
+	 	class: Wunderman\CMS\Banner\PrivateModule\Service
+
+	publicBannerFactory:
+		class: Wunderman\CMS\Banner\PublicModule\Components\Banner\Banner
+		implement: Wunderman\CMS\Banner\PublicModule\Components\Banner\IBannerFactory
+
+	privateBannerFactory:
+		class: Wunderman\CMS\Banner\PrivateModule\Components\Banner\Banner
+		implement: Wunderman\CMS\Banner\PrivateModule\Components\Banner\IBannerFactory
